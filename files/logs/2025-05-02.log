@@ -1,0 +1,154 @@
+📊 Filas totales extraídas del Excel: 156
+
+🗂️ [19:55:33] 
+📄 Archivo: 2025_05_Rates Sheets_NWFG.xlsx | 🏢 Proveedor: cs
+📊 Columnas totales: 9 (State, Utility, Product Name, Program Code, CleanSky's Rate, MSF, Term, ETF, Notes)
+✅ Columnas seleccionadas: ⏳ Aún no seleccionadas
+
+🔄 [19:55:57] Paso 2 completado
+🏢 Proveedor: cs
+✅ Columnas seleccionadas: 1 (Utility)
+
+🔄 [19:55:58] Paso 2 completado
+🏢 Proveedor: cs
+✅ Columnas seleccionadas: 2 (Utility, Product Name)
+
+🔄 [19:56:00] Paso 2 completado
+🏢 Proveedor: cs
+✅ Columnas seleccionadas: 3 (Utility, Product Name, Program Code)
+
+🔄 [19:56:00] Paso 2 completado
+🏢 Proveedor: cs
+✅ Columnas seleccionadas: 4 (Utility, Product Name, Program Code, MSF)
+
+🔄 [19:56:01] Paso 2 completado
+🏢 Proveedor: cs
+✅ Columnas seleccionadas: 5 (Utility, Product Name, Program Code, MSF, Term)
+
+🔄 [19:56:01] Paso 2 completado
+🏢 Proveedor: cs
+✅ Columnas seleccionadas: 6 (Utility, Product Name, Program Code, MSF, Term, ETF)
+📊 Filas totales extraídas del Excel: 156
+
+🗂️ [20:36:26] 
+📄 Archivo: 2025_05_Rates Sheets_NWFG.xlsx | 🏢 Proveedor: cs
+📊 Columnas totales: 9 (State, Utility, Product Name, Program Code, CleanSky's Rate, MSF, Term, ETF, Notes)
+✅ Columnas seleccionadas: ⏳ Aún no seleccionadas
+
+🔄 [20:36:30] Paso 2 completado
+🏢 Proveedor: cs
+✅ Columnas seleccionadas: 1 (State)
+
+🔄 [20:36:31] Paso 2 completado
+🏢 Proveedor: cs
+✅ Columnas seleccionadas: 2 (State, MSF)
+
+🔄 [20:36:32] Paso 2 completado
+🏢 Proveedor: cs
+✅ Columnas seleccionadas: 3 (State, MSF, Term)
+
+🔄 [20:36:34] Paso 2 completado
+🏢 Proveedor: cs
+✅ Columnas seleccionadas: 4 (State, MSF, Term, CleanSky's Rate)
+
+🔄 [20:36:35] Paso 2 completado
+🏢 Proveedor: cs
+✅ Columnas seleccionadas: 5 (State, MSF, Term, CleanSky's Rate, ETF)
+
+🔄 [20:36:35] Paso 2 completado
+🏢 Proveedor: cs
+✅ Columnas seleccionadas: 6 (State, MSF, Term, CleanSky's Rate, ETF, Notes)
+
+🔄 [20:36:36] Paso 2 completado
+🏢 Proveedor: cs
+✅ Columnas seleccionadas: 5 (State, MSF, Term, CleanSky's Rate, ETF)
+
+🔄 [20:36:38] Paso 2 completado
+🏢 Proveedor: cs
+✅ Columnas seleccionadas: 6 (State, MSF, Term, CleanSky's Rate, ETF, Product Name)
+
+🔄 [20:36:39] Paso 2 completado
+🏢 Proveedor: cs
+✅ Columnas seleccionadas: 7 (State, MSF, Term, CleanSky's Rate, ETF, Product Name, Program Code)
+
+🔄 [20:36:40] Paso 2 completado
+🏢 Proveedor: cs
+✅ Columnas seleccionadas: 6 (MSF, Term, CleanSky's Rate, ETF, Product Name, Program Code)
+
+🔄 [20:36:40] Paso 2 completado
+🏢 Proveedor: cs
+✅ Columnas seleccionadas: 7 (MSF, Term, CleanSky's Rate, ETF, Product Name, Program Code, Utility)
+
+🗂️ [20:37:09] 📄 Archivo: cs
+📊 Columnas totales en el archivo: 9 (State, Utility, Product Name, Program Code, CleanSky's Rate, MSF, Term, ETF, Notes)
+✅ Columnas seleccionadas por el usuario: 7 (MSF, Term, CleanSky's Rate, ETF, Product Name, Program Code, Utility)
+🔄 Mapping aplicado: {
+  "MSF": "MSF",
+  "Term": "duracion_rate",
+  "CleanSky's Rate": "Rate",
+  "ETF": "ETF",
+  "Product Name": "Product_Name",
+  "Program Code": "Rate_ID",
+  "Utility": "SPL_Utility_Name"
+}
+📊 Filas procesadas: 156
+
+📦 Backup creado: Rates_backup_20250502_203709
+
+🗑️ 94 registros previos de cs eliminados
+
+📊 Extraída duracion_rate automáticamente para 156 filas de Clean Sky
+📊 Filas totales extraídas del Excel: 133
+
+🗂️ [22:01:30] 
+📄 Archivo: 2025_05_Rates Sheets_NWFG.xlsx | 🏢 Proveedor: cs
+📊 Columnas totales: 9 (State, Utility, Product Name, Program Code, CleanSky's Rate, MSF, Term, ETF, Notes)
+✅ Columnas seleccionadas: ⏳ Aún no seleccionadas
+
+🔄 [22:01:36] Paso 2 completado
+🏢 Proveedor: cs
+✅ Columnas seleccionadas: 1 (Utility)
+
+🔄 [22:01:36] Paso 2 completado
+🏢 Proveedor: cs
+✅ Columnas seleccionadas: 2 (Utility, Product Name)
+
+🔄 [22:01:37] Paso 2 completado
+🏢 Proveedor: cs
+✅ Columnas seleccionadas: 3 (Utility, Product Name, Program Code)
+
+🔄 [22:01:37] Paso 2 completado
+🏢 Proveedor: cs
+✅ Columnas seleccionadas: 4 (Utility, Product Name, Program Code, CleanSky's Rate)
+
+🔄 [22:01:38] Paso 2 completado
+🏢 Proveedor: cs
+✅ Columnas seleccionadas: 5 (Utility, Product Name, Program Code, CleanSky's Rate, MSF)
+
+🔄 [22:01:38] Paso 2 completado
+🏢 Proveedor: cs
+✅ Columnas seleccionadas: 6 (Utility, Product Name, Program Code, CleanSky's Rate, MSF, Term)
+
+🔄 [22:01:39] Paso 2 completado
+🏢 Proveedor: cs
+✅ Columnas seleccionadas: 7 (Utility, Product Name, Program Code, CleanSky's Rate, MSF, Term, ETF)
+
+🗂️ [22:02:11] 📄 Archivo: cs
+📊 Columnas totales en el archivo: 9 (State, Utility, Product Name, Program Code, CleanSky's Rate, MSF, Term, ETF, Notes)
+✅ Columnas seleccionadas por el usuario: 7 (Utility, Product Name, Program Code, CleanSky's Rate, MSF, Term, ETF)
+🔄 Mapping aplicado: {
+  "Utility": "SPL_Utility_Name",
+  "Product Name": "Product_Name",
+  "Program Code": "Rate_ID",
+  "CleanSky's Rate": "Rate",
+  "MSF": "MSF",
+  "Term": "duracion_rate",
+  "ETF": "ETF"
+}
+📊 Filas procesadas: 133
+
+📦 Backup creado: Rates_backup_20250502_220211
+
+🗑️ 156 registros previos de cs eliminados
+
+📊 Extraída duracion_rate automáticamente para 133 filas de Clean Sky

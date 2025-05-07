@@ -1,0 +1,120 @@
+📊 Filas totales extraídas del Excel: 96
+
+🗂️ [21:37:24] 
+📄 Archivo: NW Family - 04.29.25.xlsx | 🏢 Proveedor: spe
+📊 Columnas totales: 17 (ProductID, CompanyDBAName, Market, ProductName, Commodity, UtilityState, UnitOfMeasure, ProductType, Rate, PTC, Savings?, MSF, EarlyTerminationFee, Term, CustomerTypes, RenewablePercentage, SpecialOffers)
+✅ Columnas seleccionadas: ⏳ Aún no seleccionadas
+
+🔄 [21:37:35] Paso 2 completado
+🏢 Proveedor: spe
+✅ Columnas seleccionadas: 1 (ProductID)
+
+🔄 [21:37:35] Paso 2 completado
+🏢 Proveedor: spe
+✅ Columnas seleccionadas: 2 (ProductID, CompanyDBAName)
+
+🔄 [21:37:36] Paso 2 completado
+🏢 Proveedor: spe
+✅ Columnas seleccionadas: 3 (ProductID, CompanyDBAName, Market)
+
+🔄 [21:37:37] Paso 2 completado
+🏢 Proveedor: spe
+✅ Columnas seleccionadas: 4 (ProductID, CompanyDBAName, Market, ProductName)
+
+🔄 [21:37:41] Paso 2 completado
+🏢 Proveedor: spe
+✅ Columnas seleccionadas: 5 (ProductID, CompanyDBAName, Market, ProductName, Rate)
+
+🔄 [21:37:41] Paso 2 completado
+🏢 Proveedor: spe
+✅ Columnas seleccionadas: 6 (ProductID, CompanyDBAName, Market, ProductName, Rate, PTC)
+
+🔄 [21:37:45] Paso 2 completado
+🏢 Proveedor: spe
+✅ Columnas seleccionadas: 5 (ProductID, CompanyDBAName, Market, ProductName, Rate)
+
+🔄 [21:37:46] Paso 2 completado
+🏢 Proveedor: spe
+✅ Columnas seleccionadas: 6 (ProductID, CompanyDBAName, Market, ProductName, Rate, MSF)
+
+🔄 [21:37:46] Paso 2 completado
+🏢 Proveedor: spe
+✅ Columnas seleccionadas: 7 (ProductID, CompanyDBAName, Market, ProductName, Rate, MSF, EarlyTerminationFee)
+
+🔄 [21:37:47] Paso 2 completado
+🏢 Proveedor: spe
+✅ Columnas seleccionadas: 8 (ProductID, CompanyDBAName, Market, ProductName, Rate, MSF, EarlyTerminationFee, Term)
+
+🗂️ [21:38:14] 📄 Archivo: spe
+📊 Columnas totales en el archivo: 17 (ProductID, CompanyDBAName, Market, ProductName, Commodity, UtilityState, UnitOfMeasure, ProductType, Rate, PTC, Savings?, MSF, EarlyTerminationFee, Term, CustomerTypes, RenewablePercentage, SpecialOffers)
+✅ Columnas seleccionadas por el usuario: 8 (ProductID, CompanyDBAName, Market, ProductName, Rate, MSF, EarlyTerminationFee, Term)
+🔄 Mapping aplicado: {
+  "ProductID": "Rate_ID",
+  "CompanyDBAName": "Company_DBA_Name",
+  "Market": "SPL_Utility_Name",
+  "ProductName": "Product_Name",
+  "Rate": "Rate",
+  "MSF": "MSF",
+  "EarlyTerminationFee": "ETF",
+  "Term": "duracion_rate"
+}
+📊 Filas procesadas: 96
+
+❌ ERROR DE BASE DE DATOS: connect ETIMEDOUT
+📊 Filas totales extraídas del Excel: 96
+
+🗂️ [22:25:10] 
+📄 Archivo: NW Family - 04.29.25.xlsx | 🏢 Proveedor: spe
+📊 Columnas totales: 17 (ProductID, CompanyDBAName, Market, ProductName, Commodity, UtilityState, UnitOfMeasure, ProductType, Rate, PTC, Savings?, MSF, EarlyTerminationFee, Term, CustomerTypes, RenewablePercentage, SpecialOffers)
+✅ Columnas seleccionadas: ⏳ Aún no seleccionadas
+
+🔄 [22:25:21] Paso 2 completado
+🏢 Proveedor: spe
+✅ Columnas seleccionadas: 1 (ProductID)
+
+🔄 [22:25:21] Paso 2 completado
+🏢 Proveedor: spe
+✅ Columnas seleccionadas: 2 (ProductID, CompanyDBAName)
+
+🔄 [22:25:24] Paso 2 completado
+🏢 Proveedor: spe
+✅ Columnas seleccionadas: 3 (ProductID, CompanyDBAName, Market)
+
+🔄 [22:25:29] Paso 2 completado
+🏢 Proveedor: spe
+✅ Columnas seleccionadas: 4 (ProductID, CompanyDBAName, Market, Rate)
+
+🔄 [22:25:33] Paso 2 completado
+🏢 Proveedor: spe
+✅ Columnas seleccionadas: 5 (ProductID, CompanyDBAName, Market, Rate, MSF)
+
+🔄 [22:25:34] Paso 2 completado
+🏢 Proveedor: spe
+✅ Columnas seleccionadas: 6 (ProductID, CompanyDBAName, Market, Rate, MSF, EarlyTerminationFee)
+
+🔄 [22:25:34] Paso 2 completado
+🏢 Proveedor: spe
+✅ Columnas seleccionadas: 7 (ProductID, CompanyDBAName, Market, Rate, MSF, EarlyTerminationFee, Term)
+
+🔄 [22:25:44] Paso 2 completado
+🏢 Proveedor: spe
+✅ Columnas seleccionadas: 8 (ProductID, CompanyDBAName, Market, Rate, MSF, EarlyTerminationFee, Term, ProductName)
+
+🗂️ [22:26:21] 📄 Archivo: spe
+📊 Columnas totales en el archivo: 17 (ProductID, CompanyDBAName, Market, ProductName, Commodity, UtilityState, UnitOfMeasure, ProductType, Rate, PTC, Savings?, MSF, EarlyTerminationFee, Term, CustomerTypes, RenewablePercentage, SpecialOffers)
+✅ Columnas seleccionadas por el usuario: 8 (ProductID, CompanyDBAName, Market, Rate, MSF, EarlyTerminationFee, Term, ProductName)
+🔄 Mapping aplicado: {
+  "ProductID": "Rate_ID",
+  "CompanyDBAName": "Company_DBA_Name",
+  "Market": "SPL_Utility_Name",
+  "Rate": "Rate",
+  "MSF": "MSF",
+  "EarlyTerminationFee": "ETF",
+  "Term": "duracion_rate",
+  "ProductName": "Product_Name"
+}
+📊 Filas procesadas: 96
+
+📦 Backup creado: Rates_backup_20250430_222621
+
+🗑️ 96 registros previos de spe eliminados

@@ -1,0 +1,13 @@
+{
+  "supplier": "nv",
+  "columns": [
+    "Utility Provider",
+    "Program Name",
+    "Program Code",
+    "Rate ($)",
+    "ETF ($)",
+    "MSF ($)",
+    "Term (Months)"
+  ],
+  "timestamp": "2025-04-09T18:00:24.457Z"
+}

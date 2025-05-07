@@ -1,0 +1,11 @@
+{
+  "supplier": "re",
+  "columns": [
+    "Rate_ID",
+    "SPL_Utility_Name",
+    "Rate",
+    "ETF",
+    "duracion_rate"
+  ],
+  "timestamp": "2025-04-08T22:28:56.744Z"
+}

@@ -1,0 +1,208 @@
+{
+  "supplier": "ie",
+  "fileOriginalName": "indra_mapping.xlsx",
+  "totalRows": 40,
+  "rows": [
+    {
+      "Utility Electric Rate": "National Grid-MECO",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "NSTAR-BECO",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "WMECO",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "PEPCO DC",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "Washington Gas DC",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "PEPCO DC",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "Delmarva DE",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "Consumers Energy",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "DTE Gas Company",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "E-Town",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "NJNG",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "PSEG",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "SJG",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "ACE",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "JCPL",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "PSEGE",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "RECO(Rockland)",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "PSEGG",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "JCPLE",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "West Penn Power",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "Duquesne Light",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "MetEd",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "PECO",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "Penelec",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "PPL",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "PECOG",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "Columbia Gas PA",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "Peoples(MCF)",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "Peoples-Equitable(MCF)",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "UGI",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "PGW",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "West Penn Power",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "PECO",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "Duquesne Light",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "MetEd",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "Penelec",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "PPL",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "Washington Gas VA",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "Columbia Gas VA",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    },
+    {
+      "Utility Electric Rate": "Washington Gas VA",
+      "product name": " https://secure.indraenergy.com/agent-access ",
+      "rate": 0
+    }
+  ],
+  "timestamp": "2025-04-15T19:03:48.615Z"
+}

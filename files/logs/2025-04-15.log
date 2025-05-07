@@ -1,0 +1,150 @@
+📊 Filas totales extraídas del Excel: 40
+
+🗂️ [11:26:00] 
+📄 Archivo: indra_mapping.xlsx | 🏢 Proveedor: ie
+📊 Columnas totales: 3 (Utility Electric Rate, product name, rate)
+✅ Columnas seleccionadas: ⏳ Aún no seleccionadas
+
+🔄 [11:26:49] Paso 2 completado
+🏢 Proveedor: ie
+✅ Columnas seleccionadas: 1 (product name)
+
+🔄 [11:26:51] Paso 2 completado
+🏢 Proveedor: ie
+✅ Columnas seleccionadas: 2 (product name, Utility Electric Rate)
+
+🗂️ [11:27:03] 📄 Archivo: ie
+📊 Columnas totales en el archivo: 3 (Utility Electric Rate, product name, rate)
+✅ Columnas seleccionadas por el usuario: 2 (product name, Utility Electric Rate)
+🔄 Mapping aplicado: {
+  "product name": "Product_Name",
+  "Utility Electric Rate": "SPL_Utility_Name"
+}
+📊 Filas procesadas: 40
+
+📦 Backup creado: Rates_backup_20250415_112703
+
+🗑️ 0 registros previos de ie eliminados
+📊 Filas totales extraídas del Excel: 40
+
+🗂️ [11:29:38] 
+📄 Archivo: indra_mapping.xlsx | 🏢 Proveedor: ie
+📊 Columnas totales: 3 (Utility Electric Rate, product name, rate)
+✅ Columnas seleccionadas: ⏳ Aún no seleccionadas
+
+🔄 [11:29:42] Paso 2 completado
+🏢 Proveedor: ie
+✅ Columnas seleccionadas: 1 (Utility Electric Rate)
+
+🔄 [11:29:43] Paso 2 completado
+🏢 Proveedor: ie
+✅ Columnas seleccionadas: 2 (Utility Electric Rate, product name)
+
+🔄 [11:29:43] Paso 2 completado
+🏢 Proveedor: ie
+✅ Columnas seleccionadas: 3 (Utility Electric Rate, product name, rate)
+
+🗂️ [11:29:53] 📄 Archivo: ie
+📊 Columnas totales en el archivo: 3 (Utility Electric Rate, product name, rate)
+✅ Columnas seleccionadas por el usuario: 3 (Utility Electric Rate, product name, rate)
+🔄 Mapping aplicado: {
+  "Utility Electric Rate": "SPL_Utility_Name",
+  "product name": "Product_Name",
+  "rate": "Rate"
+}
+📊 Filas procesadas: 40
+
+📦 Backup creado: Rates_backup_20250415_112953
+
+🗑️ 0 registros previos de ie eliminados
+📊 Filas totales extraídas del Excel: 40
+
+🗂️ [12:49:34] 
+📄 Archivo: indra_mapping.xlsx | 🏢 Proveedor: ie
+📊 Columnas totales: 3 (Utility Electric Rate, product name, rate)
+✅ Columnas seleccionadas: ⏳ Aún no seleccionadas
+
+🔄 [12:49:40] Paso 2 completado
+🏢 Proveedor: ie
+✅ Columnas seleccionadas: 1 (Utility Electric Rate)
+
+🔄 [12:49:41] Paso 2 completado
+🏢 Proveedor: ie
+✅ Columnas seleccionadas: 2 (Utility Electric Rate, product name)
+
+🗂️ [12:50:03] 📄 Archivo: ie
+📊 Columnas totales en el archivo: 3 (Utility Electric Rate, product name, rate)
+✅ Columnas seleccionadas por el usuario: 2 (Utility Electric Rate, product name)
+🔄 Mapping aplicado: {
+  "Utility Electric Rate": "SPL_Utility_Name",
+  "product name": "Product_Name"
+}
+📊 Filas procesadas: 40
+
+📦 Backup creado: Rates_backup_20250415_125003
+
+🗑️ 40 registros previos de ie eliminados
+📊 Filas totales extraídas del Excel: 40
+
+🗂️ [12:55:08] 
+📄 Archivo: indra_mapping.xlsx | 🏢 Proveedor: ie
+📊 Columnas totales: 3 (Utility Electric Rate, product name, rate)
+✅ Columnas seleccionadas: ⏳ Aún no seleccionadas
+
+🔄 [12:55:19] Paso 2 completado
+🏢 Proveedor: ie
+✅ Columnas seleccionadas: 1 (Utility Electric Rate)
+
+🗂️ [12:55:25] 📄 Archivo: ie
+📊 Columnas totales en el archivo: 3 (Utility Electric Rate, product name, rate)
+✅ Columnas seleccionadas por el usuario: 1 (Utility Electric Rate)
+🔄 Mapping aplicado: {
+  "Utility Electric Rate": "SPL_Utility_Name"
+}
+📊 Filas procesadas: 40
+
+📦 Backup creado: Rates_backup_20250415_125525
+
+🗑️ 0 registros previos de ie eliminados
+📊 Filas totales extraídas del Excel: 40
+
+🗂️ [14:03:11] 
+📄 Archivo: indra_mapping.xlsx | 🏢 Proveedor: ie
+📊 Columnas totales: 3 (Utility Electric Rate, product name, rate)
+✅ Columnas seleccionadas: ⏳ Aún no seleccionadas
+
+🔄 [14:03:14] Paso 2 completado
+🏢 Proveedor: ie
+✅ Columnas seleccionadas: 1 (Utility Electric Rate)
+📊 Filas totales extraídas del Excel: 40
+
+🗂️ [14:03:48] 
+📄 Archivo: indra_mapping.xlsx | 🏢 Proveedor: ie
+📊 Columnas totales: 3 (Utility Electric Rate, product name, rate)
+✅ Columnas seleccionadas: ⏳ Aún no seleccionadas
+
+🔄 [14:03:52] Paso 2 completado
+🏢 Proveedor: ie
+✅ Columnas seleccionadas: 1 (Utility Electric Rate)
+
+🔄 [14:03:52] Paso 2 completado
+🏢 Proveedor: ie
+✅ Columnas seleccionadas: 2 (Utility Electric Rate, product name)
+
+🔄 [14:03:53] Paso 2 completado
+🏢 Proveedor: ie
+✅ Columnas seleccionadas: 3 (Utility Electric Rate, product name, rate)
+
+🗂️ [14:04:08] 📄 Archivo: ie
+📊 Columnas totales en el archivo: 3 (Utility Electric Rate, product name, rate)
+✅ Columnas seleccionadas por el usuario: 3 (Utility Electric Rate, product name, rate)
+🔄 Mapping aplicado: {
+  "Utility Electric Rate": "SPL_Utility_Name",
+  "product name": "Product_Name",
+  "rate": "Rate"
+}
+📊 Filas procesadas: 40
+
+📦 Backup creado: Rates_backup_20250415_140408
+
+🗑️ 0 registros previos de ie eliminados

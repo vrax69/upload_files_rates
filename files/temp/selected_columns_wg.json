@@ -1,0 +1,13 @@
+{
+  "supplier": "wg",
+  "columns": [
+    "Utility Provider",
+    "Program Name",
+    "Program Code",
+    "Rate ($)",
+    "ETF ($)",
+    "MSF ($)",
+    "Term (Months)"
+  ],
+  "timestamp": "2025-04-14T20:19:51.750Z"
+}

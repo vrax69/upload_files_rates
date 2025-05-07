@@ -1,0 +1,14 @@
+{
+  "supplier": "spe",
+  "columns": [
+    "ProductID",
+    "CompanyDBAName",
+    "Market",
+    "ProductName",
+    "Rate",
+    "MSF",
+    "EarlyTerminationFee",
+    "Term"
+  ],
+  "timestamp": "2025-05-06T15:33:39.029Z"
+}

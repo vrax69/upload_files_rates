@@ -1,0 +1,12 @@
+{
+  "supplier": "nge",
+  "columns": [
+    "Program Code",
+    "Utility",
+    "Term",
+    "Rate (₵)",
+    "Monthly Service Fee",
+    "Cancellation Fee"
+  ],
+  "timestamp": "2025-04-09T17:29:42.591Z"
+}

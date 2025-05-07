@@ -1,0 +1,1119 @@
+
+===============================
+📋 SERVIDOR INICIADO: 2025-04-15T16:22:08.884Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-04-15T16:22:08.929Z
+[2025-04-15 11:25:40] 📌 GET /columns
+[2025-04-15 11:26:00] 📌 POST /upload
+📌 Columnas seleccionadas recibidas en el backend: []
+📊 Total de filas extraídas del Excel: 40
+✅ Archivo subido: indra_mapping.xlsx - Columnas: 3
+[2025-04-15 11:26:49] 📌 OPTIONS /save-selected-columns
+[2025-04-15 11:26:49] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para ie: 1
+[2025-04-15 11:26:51] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para ie: 2
+[2025-04-15 11:27:02] 📌 GET /get-rows/ie
+📊 Devolviendo 40 filas para ie
+[2025-04-15 11:27:02] 📌 OPTIONS /map-columns
+[2025-04-15 11:27:03] 📌 POST /map-columns
+📌 Supplier recibido: ie
+📌 Columnas seleccionadas en /map-columns: [ 'product name', 'Utility Electric Rate' ]
+📌 Mapping de columnas recibido: {
+  'product name': 'Product_Name',
+  'Utility Electric Rate': 'SPL_Utility_Name'
+}
+📌 Filas recibidas: 40
+✅ Conexión a la base de datos establecida
+✅ Backup creado: Rates_backup_20250415_112703
+🔄 Eliminando registros previos de SPL: ie
+✅ Registros eliminados: 0
+📝 Query de inserción preparada: INSERT INTO Rates (Product_Name, SPL_Utility_Name, SPL) VALUES (?, ?, ?)
+✅ 0 filas insertadas correctamente en Rates
+📣 Notificación enviada a Discord para el proveedor ie por usuario admin
+📌 Conexión a la base de datos cerrada
+[2025-04-15 11:27:05] 📌 GET /columns
+[2025-04-15 11:29:38] 📌 POST /upload
+📌 Columnas seleccionadas recibidas en el backend: []
+📊 Total de filas extraídas del Excel: 40
+✅ Archivo subido: indra_mapping.xlsx - Columnas: 3
+[2025-04-15 11:29:42] 📌 OPTIONS /save-selected-columns
+[2025-04-15 11:29:42] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para ie: 1
+[2025-04-15 11:29:43] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para ie: 2
+[2025-04-15 11:29:43] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para ie: 3
+[2025-04-15 11:29:53] 📌 GET /get-rows/ie
+📊 Devolviendo 40 filas para ie
+[2025-04-15 11:29:53] 📌 OPTIONS /map-columns
+[2025-04-15 11:29:53] 📌 POST /map-columns
+📌 Supplier recibido: ie
+📌 Columnas seleccionadas en /map-columns: [ 'Utility Electric Rate', 'product name', 'rate' ]
+📌 Mapping de columnas recibido: {
+  'Utility Electric Rate': 'SPL_Utility_Name',
+  'product name': 'Product_Name',
+  rate: 'Rate'
+}
+📌 Filas recibidas: 40
+✅ Conexión a la base de datos establecida
+✅ Backup creado: Rates_backup_20250415_112953
+🔄 Eliminando registros previos de SPL: ie
+✅ Registros eliminados: 0
+📝 Query de inserción preparada: INSERT INTO Rates (SPL_Utility_Name, Product_Name, Rate, SPL) VALUES (?, ?, ?, ?)
+✅ 40 filas insertadas correctamente en Rates
+📣 Notificación enviada a Discord para el proveedor ie por usuario admin
+📌 Conexión a la base de datos cerrada
+[2025-04-15 11:29:56] 📌 GET /columns
+[2025-04-15 12:14:08] 📌 GET /
+[2025-04-15 12:49:34] 📌 POST /upload
+📌 Columnas seleccionadas recibidas en el backend: []
+📊 Total de filas extraídas del Excel: 40
+✅ Archivo subido: indra_mapping.xlsx - Columnas: 3
+[2025-04-15 12:49:40] 📌 OPTIONS /save-selected-columns
+[2025-04-15 12:49:40] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para ie: 1
+[2025-04-15 12:49:41] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para ie: 2
+[2025-04-15 12:50:03] 📌 GET /get-rows/ie
+📊 Devolviendo 40 filas para ie
+[2025-04-15 12:50:03] 📌 OPTIONS /map-columns
+[2025-04-15 12:50:03] 📌 POST /map-columns
+📌 Supplier recibido: ie
+📌 Columnas seleccionadas en /map-columns: [ 'Utility Electric Rate', 'product name' ]
+📌 Mapping de columnas recibido: {
+  'Utility Electric Rate': 'SPL_Utility_Name',
+  'product name': 'Product_Name'
+}
+📌 Filas recibidas: 40
+✅ Conexión a la base de datos establecida
+✅ Backup creado: Rates_backup_20250415_125003
+🔄 Eliminando registros previos de SPL: ie
+✅ Registros eliminados: 40
+📝 Query de inserción preparada: INSERT INTO Rates (SPL_Utility_Name, Product_Name, SPL) VALUES (?, ?, ?)
+✅ 0 filas insertadas correctamente en Rates
+📣 Notificación enviada a Discord para el proveedor ie por usuario admin
+📌 Conexión a la base de datos cerrada
+
+===============================
+📋 SERVIDOR INICIADO: 2025-04-15T17:50:45.592Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-04-15T17:50:45.637Z
+[2025-04-15 12:55:00] 📌 GET /columns
+[2025-04-15 12:55:08] 📌 POST /upload
+📌 Columnas seleccionadas recibidas en el backend: []
+📊 Total de filas extraídas del Excel: 40
+✅ Archivo subido: indra_mapping.xlsx - Columnas: 3
+[2025-04-15 12:55:19] 📌 OPTIONS /save-selected-columns
+[2025-04-15 12:55:19] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para ie: 1
+[2025-04-15 12:55:25] 📌 GET /get-rows/ie
+📊 Devolviendo 40 filas para ie
+[2025-04-15 12:55:25] 📌 OPTIONS /map-columns
+[2025-04-15 12:55:25] 📌 POST /map-columns
+📌 Supplier recibido: ie
+📌 Columnas seleccionadas en /map-columns: [ 'Utility Electric Rate' ]
+📌 Mapping de columnas recibido: { 'Utility Electric Rate': 'SPL_Utility_Name' }
+📌 Filas recibidas: 40
+✅ Conexión a la base de datos establecida
+✅ Backup creado: Rates_backup_20250415_125525
+🔄 Eliminando registros previos de SPL: ie
+✅ Registros eliminados: 0
+📝 Query de inserción preparada: INSERT INTO Rates (SPL_Utility_Name, SPL) VALUES (?, ?)
+✅ 0 filas insertadas correctamente en Rates
+📣 Notificación enviada a Discord para el proveedor ie por usuario admin
+📌 Conexión a la base de datos cerrada
+
+===============================
+📋 SERVIDOR INICIADO: 2025-04-15T18:02:16.115Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-04-15T18:02:16.158Z
+
+===============================
+📋 SERVIDOR INICIADO: 2025-04-15T19:02:28.253Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-04-15T19:02:28.298Z
+[2025-04-15 14:03:04] 📌 GET /columns
+[2025-04-15 14:03:11] 📌 POST /upload
+📌 Columnas seleccionadas recibidas en el backend: []
+📊 Total de filas extraídas del Excel: 40
+✅ Archivo subido: indra_mapping.xlsx - Columnas: 3
+[2025-04-15 14:03:14] 📌 OPTIONS /save-selected-columns
+[2025-04-15 14:03:14] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para ie: 1
+[2025-04-15 14:03:20] 📌 GET /get-rows/ie
+📊 Devolviendo 40 filas para ie
+[2025-04-15 14:03:20] 📌 OPTIONS /map-columns
+[2025-04-15 14:03:20] 📌 POST /map-columns
+📌 Supplier recibido: ie
+📌 Columnas seleccionadas en /map-columns: [ 'Utility Electric Rate' ]
+📌 Mapping de columnas recibido: { 'Utility Electric Rate': 'SPL_Utility_Name' }
+📌 Filas recibidas: 40
+🛑 No se encontraron filas válidas para insertar. Se aborta la operación sin tocar la base de datos.
+[2025-04-15 14:03:41] 📌 GET /columns
+[2025-04-15 14:03:48] 📌 POST /upload
+📌 Columnas seleccionadas recibidas en el backend: []
+📊 Total de filas extraídas del Excel: 40
+✅ Archivo subido: indra_mapping.xlsx - Columnas: 3
+[2025-04-15 14:03:52] 📌 OPTIONS /save-selected-columns
+[2025-04-15 14:03:52] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para ie: 1
+[2025-04-15 14:03:52] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para ie: 2
+[2025-04-15 14:03:53] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para ie: 3
+[2025-04-15 14:04:07] 📌 GET /get-rows/ie
+📊 Devolviendo 40 filas para ie
+[2025-04-15 14:04:08] 📌 OPTIONS /map-columns
+[2025-04-15 14:04:08] 📌 POST /map-columns
+📌 Supplier recibido: ie
+📌 Columnas seleccionadas en /map-columns: [ 'Utility Electric Rate', 'product name', 'rate' ]
+📌 Mapping de columnas recibido: {
+  'Utility Electric Rate': 'SPL_Utility_Name',
+  'product name': 'Product_Name',
+  rate: 'Rate'
+}
+📌 Filas recibidas: 40
+✅ Conexión a la base de datos establecida
+✅ Backup creado: Rates_backup_20250415_140408
+🔄 Eliminando registros previos de SPL: ie
+✅ Registros eliminados: 0
+📝 Query de inserción preparada: INSERT INTO Rates (SPL_Utility_Name, Product_Name, Rate, SPL) VALUES (?, ?, ?, ?)
+✅ 40 filas insertadas correctamente en Rates
+📣 Notificación enviada a Discord para el proveedor ie por usuario admin
+📌 Conexión a la base de datos cerrada
+[2025-04-15 14:04:12] 📌 GET /columns
+[2025-04-15 14:11:54] 📌 GET /columns
+[2025-04-15 14:11:54] 📌 GET /columns
+[2025-04-15 14:13:46] 📌 GET /columns
+[2025-04-15 14:13:46] 📌 GET /columns
+[2025-04-15 17:15:40] 📌 GET /columns
+[2025-04-15 17:15:40] 📌 GET /columns
+[2025-04-15 17:15:43] 📌 GET /columns
+[2025-04-15 20:27:00] 📌 GET /
+[2025-04-15 21:49:51] 📌 GET /
+[2025-04-15 23:04:19] 📌 GET /
+[2025-04-16 02:02:53] 📌 GET /
+[2025-04-16 02:03:08] 📌 GET /
+[2025-04-16 02:03:12] 📌 GET /favicon.ico
+[2025-04-16 10:16:11] 📌 GET /
+[2025-04-16 12:52:25] 📌 GET /
+[2025-04-16 12:52:34] 📌 GET /
+[2025-04-16 12:52:48] 📌 GET /favicon.ico
+[2025-04-16 12:56:49] 📌 GET /
+[2025-04-16 12:57:05] 📌 GET /
+[2025-04-16 12:57:41] 📌 GET /favicon.ico
+
+===============================
+📋 SERVIDOR INICIADO: 2025-04-16T19:45:41.536Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-04-16T19:45:41.579Z
+[2025-04-16 16:00:27] 📌 GET /pdown
+[2025-04-16 22:15:52] 📌 GET /
+[2025-04-17 04:06:02] 📌 GET /
+[2025-04-17 04:06:17] 📌 GET /
+[2025-04-17 04:06:25] 📌 GET /favicon.ico
+[2025-04-17 07:47:54] 📌 GET /
+[2025-04-17 08:21:00] 📌 GET /pdown
+[2025-04-17 08:58:36] 📌 GET /
+[2025-04-17 09:09:41] 📌 GET /pdown
+[2025-04-17 16:46:19] 📌 GET /columns
+[2025-04-17 16:46:19] 📌 GET /columns
+[2025-04-17 23:46:30] 📌 GET /
+[2025-04-18 00:18:42] 📌 GET /
+[2025-04-18 05:37:10] 📌 GET /
+[2025-04-18 05:37:27] 📌 GET /favicon.ico
+[2025-04-18 05:59:33] 📌 GET /
+[2025-04-18 05:59:49] 📌 GET /
+[2025-04-18 06:00:15] 📌 GET /favicon.ico
+[2025-04-18 06:58:01] 📌 GET /
+[2025-04-18 06:58:21] 📌 GET /
+[2025-04-18 06:58:30] 📌 GET /favicon.ico
+[2025-04-18 08:14:52] 📌 GET /pdown
+[2025-04-18 10:51:31] 📌 GET /
+[2025-04-18 17:24:09] 📌 GET /
+[2025-04-18 22:41:42] 📌 GET /
+[2025-04-19 01:15:24] 📌 GET /
+[2025-04-19 03:53:45] 📌 GET /
+[2025-04-19 03:53:55] 📌 GET /
+[2025-04-19 03:54:08] 📌 GET /favicon.ico
+[2025-04-19 05:39:25] 📌 GET /
+[2025-04-19 05:39:42] 📌 GET /
+[2025-04-19 05:39:49] 📌 GET /favicon.ico
+[2025-04-19 08:15:43] 📌 GET /pdown
+[2025-04-19 11:13:52] 📌 GET /
+[2025-04-19 21:54:45] 📌 GET /
+[2025-04-19 22:34:21] 📌 GET /
+[2025-04-19 22:34:39] 📌 GET /
+[2025-04-19 22:34:45] 📌 GET /favicon.ico
+[2025-04-20 02:12:23] 📌 GET /
+[2025-04-20 03:02:29] 📌 GET /
+[2025-04-20 03:02:40] 📌 GET /
+[2025-04-20 03:02:57] 📌 GET /favicon.ico
+[2025-04-20 08:15:00] 📌 GET /pdown
+[2025-04-20 10:08:26] 📌 GET /
+[2025-04-20 13:56:27] 📌 GET /
+[2025-04-20 16:03:44] 📌 GET /
+[2025-04-20 16:04:29] 📌 GET /
+[2025-04-20 16:04:51] 📌 GET /
+[2025-04-20 23:48:06] 📌 GET /
+[2025-04-21 00:26:05] 📌 GET /
+[2025-04-21 00:26:21] 📌 GET /
+[2025-04-21 00:26:29] 📌 GET /favicon.ico
+[2025-04-21 03:03:34] 📌 GET /
+[2025-04-21 03:03:51] 📌 GET /
+[2025-04-21 03:04:22] 📌 GET /favicon.ico
+[2025-04-21 08:10:17] 📌 GET /
+[2025-04-21 08:16:08] 📌 GET /pdown
+[2025-04-21 08:18:19] 📌 GET /favicon.ico
+[2025-04-21 09:06:51] 📌 GET /
+[2025-04-21 13:58:07] 📌 GET /
+[2025-04-21 13:58:14] 📌 GET /favicon.ico
+[2025-04-21 13:58:15] 📌 GET /robots.txt
+[2025-04-21 13:58:16] 📌 GET /sitemap.xml
+[2025-04-21 13:58:36] 📌 GET /sse
+[2025-04-21 13:58:38] 📌 GET /mcp
+[2025-04-21 13:58:40] 📌 GET /mcp-sse
+[2025-04-21 16:04:27] 📌 GET /
+[2025-04-21 17:37:15] 📌 GET /
+[2025-04-21 17:37:39] 📌 GET /robots.txt
+[2025-04-21 17:37:40] 📌 GET /sitemap.xml
+[2025-04-21 17:38:04] 📌 GET /sse
+[2025-04-21 17:38:05] 📌 GET /mcp
+[2025-04-21 17:38:05] 📌 GET /mcp-sse
+
+===============================
+📋 SERVIDOR INICIADO: 2025-04-22T19:14:39.414Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-04-22T19:14:39.456Z
+
+===============================
+📋 SERVIDOR INICIADO: 2025-04-22T21:38:17.006Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-04-22T21:38:17.049Z
+
+===============================
+📋 SERVIDOR INICIADO: 2025-04-22T17:21:20.653Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-04-22T17:21:20.698Z
+[2025-04-22 12:23:38] 📌 GET /columns
+[2025-04-22 12:23:38] 📌 GET /columns
+[2025-04-22 12:27:57] 📌 POST /upload
+📌 Columnas seleccionadas recibidas en el backend: []
+📊 Total de filas extraídas del Excel: 96
+✅ Archivo subido: NW Family - 04.22.25.xlsx - Columnas: 17
+[2025-04-22 12:28:03] 📌 OPTIONS /save-selected-columns
+[2025-04-22 12:28:03] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 1
+[2025-04-22 12:28:03] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 2
+[2025-04-22 12:28:03] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 3
+[2025-04-22 12:28:05] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 4
+[2025-04-22 12:28:21] 📌 OPTIONS /save-selected-columns
+[2025-04-22 12:28:21] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 5
+[2025-04-22 12:28:23] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 6
+[2025-04-22 12:28:23] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 7
+[2025-04-22 12:28:24] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 6
+[2025-04-22 12:28:24] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 7
+[2025-04-22 12:28:24] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 8
+[2025-04-22 12:29:12] 📌 GET /get-rows/spe
+📊 Devolviendo 96 filas para spe
+[2025-04-22 12:29:12] 📌 OPTIONS /map-columns
+[2025-04-22 12:29:12] 📌 POST /map-columns
+📌 Supplier recibido: spe
+📌 Columnas seleccionadas en /map-columns: [
+  'ProductID',
+  'CompanyDBAName',
+  'Market',
+  'ProductName',
+  'Rate',
+  'MSF',
+  'EarlyTerminationFee',
+  'Term'
+]
+📌 Mapping de columnas recibido: {
+  ProductID: 'Rate_ID',
+  CompanyDBAName: 'Company_DBA_Name',
+  Market: 'SPL_Utility_Name',
+  ProductName: 'Product_Name',
+  Rate: 'Rate',
+  MSF: 'MSF',
+  EarlyTerminationFee: 'ETF',
+  Term: 'duracion_rate'
+}
+📌 Filas recibidas: 96
+✅ Conexión a la base de datos establecida
+✅ Backup creado: Rates_backup_20250422_122912
+🔄 Eliminando registros previos de SPL: spe
+✅ Registros eliminados: 96
+📝 Query de inserción preparada: INSERT INTO Rates (Rate_ID, Company_DBA_Name, SPL_Utility_Name, Product_Name, Rate, MSF, ETF, duracion_rate, SPL) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+✅ 96 filas insertadas correctamente en Rates
+📣 Notificación enviada a Discord para el proveedor spe por usuario Brian Llanes
+📌 Conexión a la base de datos cerrada
+[2025-04-22 12:29:59] 📌 GET /columns
+[2025-04-22 14:28:44] 📌 GET /columns
+[2025-04-22 14:28:44] 📌 GET /columns
+[2025-04-22 14:28:46] 📌 GET /columns
+[2025-04-22 14:45:17] 📌 GET /columns
+[2025-04-22 14:45:17] 📌 GET /columns
+[2025-04-22 14:59:41] 📌 GET /
+[2025-04-22 14:59:57] 📌 GET /favicon.ico
+
+===============================
+📋 SERVIDOR INICIADO: 2025-04-23T05:52:05.925Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-04-23T05:52:05.968Z
+[2025-04-22 22:56:16] 📌 GET /
+[2025-04-23 03:15:11] 📌 GET /
+[2025-04-23 03:15:27] 📌 GET /
+[2025-04-23 03:15:33] 📌 GET /favicon.ico
+[2025-04-23 04:24:24] 📌 GET /
+
+===============================
+📋 SERVIDOR INICIADO: 2025-04-23T17:01:30.953Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-04-23T17:01:30.996Z
+[2025-04-23 08:16:30] 📌 GET /pdown
+[2025-04-23 09:00:48] 📌 GET /
+[2025-04-23 09:58:29] 📌 GET /
+[2025-04-23 11:27:58] 📌 GET /columns
+[2025-04-23 11:27:58] 📌 GET /columns
+[2025-04-23 11:28:02] 📌 GET /columns
+[2025-04-23 11:29:14] 📌 GET /columns
+[2025-04-23 11:29:14] 📌 GET /columns
+[2025-04-23 11:30:08] 📌 GET /columns
+[2025-04-23 11:30:08] 📌 GET /columns
+[2025-04-23 11:31:26] 📌 GET /columns
+[2025-04-23 11:31:26] 📌 GET /columns
+[2025-04-23 11:40:35] 📌 GET /columns
+[2025-04-23 11:40:35] 📌 GET /columns
+[2025-04-23 15:54:29] 📌 GET /columns
+[2025-04-23 17:40:09] 📌 GET /
+[2025-04-23 23:11:41] 📌 GET /
+[2025-04-23 23:36:19] 📌 GET /
+[2025-04-23 23:36:30] 📌 GET /
+[2025-04-23 23:36:48] 📌 GET /favicon.ico
+[2025-04-24 01:52:53] 📌 GET /
+[2025-04-24 02:24:52] 📌 GET /
+[2025-04-24 02:25:12] 📌 GET /
+[2025-04-24 02:25:25] 📌 GET /favicon.ico
+[2025-04-24 03:05:03] 📌 GET /
+[2025-04-24 03:27:14] 📌 GET /
+[2025-04-24 03:27:38] 📌 GET /favicon.ico
+[2025-04-24 08:14:03] 📌 GET /pdown
+[2025-04-24 10:22:15] 📌 GET /columns
+[2025-04-24 10:22:15] 📌 GET /columns
+[2025-04-24 10:26:09] 📌 GET /columns
+[2025-04-24 10:26:09] 📌 GET /columns
+[2025-04-24 10:28:20] 📌 GET /
+[2025-04-24 10:55:17] 📌 GET /
+[2025-04-24 11:39:02] 📌 GET /
+[2025-04-24 11:39:08] 📌 GET /favicon.ico
+[2025-04-24 11:39:08] 📌 GET /robots.txt
+[2025-04-24 11:39:09] 📌 GET /sitemap.xml
+[2025-04-24 11:39:15] 📌 GET /sse
+[2025-04-24 11:39:16] 📌 GET /mcp
+[2025-04-24 11:39:16] 📌 GET /mcp-sse
+[2025-04-24 11:43:34] 📌 GET /
+[2025-04-24 15:18:09] 📌 GET /columns
+[2025-04-24 15:18:09] 📌 GET /columns
+[2025-04-24 15:18:14] 📌 GET /columns
+[2025-04-24 15:18:14] 📌 GET /columns
+[2025-04-24 15:59:44] 📌 GET /columns
+[2025-04-24 15:59:44] 📌 GET /columns
+[2025-04-24 16:04:41] 📌 GET /columns
+[2025-04-24 16:12:41] 📌 GET /
+[2025-04-24 16:20:38] 📌 GET /columns
+[2025-04-24 16:20:43] 📌 GET /columns
+[2025-04-24 16:20:44] 📌 GET /columns
+[2025-04-24 17:43:48] 📌 GET /columns
+[2025-04-24 17:43:50] 📌 GET /columns
+
+===============================
+📋 SERVIDOR INICIADO: 2025-04-25T04:49:57.628Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-04-25T04:49:57.672Z
+[2025-04-24 22:47:55] 📌 GET /
+[2025-04-25 03:34:40] 📌 GET /
+[2025-04-25 03:37:31] 📌 GET /
+[2025-04-25 03:37:45] 📌 GET /
+[2025-04-25 03:37:50] 📌 GET /favicon.ico
+[2025-04-25 08:15:25] 📌 GET /pdown
+[2025-04-25 10:49:30] 📌 GET /
+[2025-04-25 14:05:29] 📌 GET //libs/js/iframe.js
+[2025-04-25 14:15:28] 📌 GET //admin/config.php
+[2025-04-25 14:20:23] 📌 GET //admin/config.php
+[2025-04-25 14:25:29] 📌 GET //admin/modules/framework/amp_conf/htdocs/admin/config.php
+[2025-04-25 15:33:45] 📌 GET /
+[2025-04-25 15:34:25] 📌 GET /favicon.ico
+[2025-04-25 20:17:35] 📌 GET /
+[2025-04-25 20:17:50] 📌 GET /
+[2025-04-25 20:17:54] 📌 GET /favicon.ico
+[2025-04-25 22:49:58] 📌 GET /
+[2025-04-26 00:24:10] 📌 GET /
+[2025-04-26 00:24:20] 📌 GET /
+[2025-04-26 00:24:38] 📌 GET /favicon.ico
+[2025-04-26 08:15:52] 📌 GET /pdown
+[2025-04-26 11:20:05] 📌 GET /
+[2025-04-26 14:38:33] 📌 GET /
+
+===============================
+📋 SERVIDOR INICIADO: 2025-04-28T21:23:50.912Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-04-28T21:23:50.956Z
+
+===============================
+📋 SERVIDOR INICIADO: 2025-04-30T17:34:57.540Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-04-30T17:34:57.580Z
+
+===============================
+📋 SERVIDOR INICIADO: 2025-04-30T19:28:30.860Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-04-30T19:28:30.900Z
+
+===============================
+📋 SERVIDOR INICIADO: 2025-04-30T19:57:42.130Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-04-30T19:57:42.169Z
+[2025-04-30 19:57:46] 📌 GET /rates/columns
+[2025-04-30 20:38:28] 📌 GET /columns
+[2025-04-30 20:44:09] 📌 GET /columns
+[2025-04-30 21:25:07] 📌 GET /columns
+[2025-04-30 21:28:16] 📌 GET /columns
+[2025-04-30 21:28:25] 📌 GET /columns
+[2025-04-30 21:34:18] 📌 GET /columns
+[2025-04-30 21:37:24] 📌 POST /upload
+📌 Columnas seleccionadas recibidas en el backend: []
+📊 Total de filas extraídas del Excel: 96
+✅ Archivo subido: NW Family - 04.29.25.xlsx - Columnas: 17
+[2025-04-30 21:37:35] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 1
+[2025-04-30 21:37:35] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 2
+[2025-04-30 21:37:36] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 3
+[2025-04-30 21:37:37] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 4
+[2025-04-30 21:37:41] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 5
+[2025-04-30 21:37:41] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 6
+[2025-04-30 21:37:45] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 5
+[2025-04-30 21:37:46] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 6
+[2025-04-30 21:37:46] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 7
+[2025-04-30 21:37:47] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 8
+[2025-04-30 21:38:14] 📌 GET /get-rows/spe
+📊 Devolviendo 96 filas para spe
+[2025-04-30 21:38:14] 📌 POST /map-columns
+📌 Supplier recibido: spe
+📌 Columnas seleccionadas en /map-columns: [
+  'ProductID',
+  'CompanyDBAName',
+  'Market',
+  'ProductName',
+  'Rate',
+  'MSF',
+  'EarlyTerminationFee',
+  'Term'
+]
+📌 Mapping de columnas recibido: {
+  ProductID: 'Rate_ID',
+  CompanyDBAName: 'Company_DBA_Name',
+  Market: 'SPL_Utility_Name',
+  ProductName: 'Product_Name',
+  Rate: 'Rate',
+  MSF: 'MSF',
+  EarlyTerminationFee: 'ETF',
+  Term: 'duracion_rate'
+}
+📌 Filas recibidas: 96
+❌ Error en operación de base de datos: Error: connect ETIMEDOUT
+    at Object.createConnectionPromise [as createConnection] (/home/vrax/node_modules/.pnpm/mysql2@3.14.1/node_modules/mysql2/promise.js:19:31)
+    at /home/vrax/node_apps/upload_files_rates/update_rates_table.js:413:38 {
+  code: 'ETIMEDOUT',
+  errno: undefined,
+  sqlState: undefined
+}
+❌ Error en /map-columns: Error: Error de base de datos: connect ETIMEDOUT
+    at /home/vrax/node_apps/upload_files_rates/update_rates_table.js:624:23
+
+===============================
+📋 SERVIDOR INICIADO: 2025-04-30T22:24:57.805Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-04-30T22:24:57.845Z
+[2025-04-30 22:25:02] 📌 GET /columns
+[2025-04-30 22:25:10] 📌 POST /upload
+📌 Columnas seleccionadas recibidas en el backend: []
+📊 Total de filas extraídas del Excel: 96
+✅ Archivo subido: NW Family - 04.29.25.xlsx - Columnas: 17
+[2025-04-30 22:25:21] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 1
+[2025-04-30 22:25:21] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 2
+[2025-04-30 22:25:24] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 3
+[2025-04-30 22:25:29] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 4
+[2025-04-30 22:25:33] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 5
+[2025-04-30 22:25:34] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 6
+[2025-04-30 22:25:34] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 7
+[2025-04-30 22:25:44] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 8
+[2025-04-30 22:26:21] 📌 GET /get-rows/spe
+📊 Devolviendo 96 filas para spe
+[2025-04-30 22:26:21] 📌 POST /map-columns
+📌 Supplier recibido: spe
+📌 Columnas seleccionadas en /map-columns: [
+  'ProductID',
+  'CompanyDBAName',
+  'Market',
+  'Rate',
+  'MSF',
+  'EarlyTerminationFee',
+  'Term',
+  'ProductName'
+]
+📌 Mapping de columnas recibido: {
+  ProductID: 'Rate_ID',
+  CompanyDBAName: 'Company_DBA_Name',
+  Market: 'SPL_Utility_Name',
+  Rate: 'Rate',
+  MSF: 'MSF',
+  EarlyTerminationFee: 'ETF',
+  Term: 'duracion_rate',
+  ProductName: 'Product_Name'
+}
+📌 Filas recibidas: 96
+🔄 Intentando conectar a la base de datos con la configuración:
+{
+  host: 'localhost',
+  user: 'admin',
+  password: 'Usuario19.',
+  database: 'rates_db'
+}
+✅ Conexión a la base de datos establecida
+✅ Backup creado: Rates_backup_20250430_222621
+🔄 Eliminando registros previos de SPL: spe
+✅ Registros eliminados: 96
+📝 Query de inserción preparada: INSERT INTO Rates (Rate_ID, Company_DBA_Name, SPL_Utility_Name, Rate, MSF, ETF, duracion_rate, Product_Name, SPL) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+✅ 96 filas insertadas correctamente en Rates
+📣 Notificación enviada a Discord para el proveedor spe por usuario Brian Llanes
+📌 Conexión a la base de datos cerrada
+[2025-04-30 22:26:36] 📌 GET /columns
+
+===============================
+📋 SERVIDOR INICIADO: 2025-05-01T15:40:11.126Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-05-01T15:40:11.163Z
+[2025-05-01 15:40:21] 📌 GET /columns
+[2025-05-01 15:40:39] 📌 POST /upload
+📌 Columnas seleccionadas recibidas en el backend: []
+📊 Total de filas extraídas del Excel: 96
+✅ Archivo subido: NW Family - 04.29.25.xlsx - Columnas: 17
+[2025-05-01 15:40:45] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 1
+[2025-05-01 15:40:46] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 2
+[2025-05-01 15:40:46] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 3
+[2025-05-01 15:40:47] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 4
+[2025-05-01 15:40:51] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 5
+[2025-05-01 15:40:51] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 6
+[2025-05-01 15:40:52] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 5
+[2025-05-01 15:40:54] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 6
+[2025-05-01 15:40:55] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 7
+[2025-05-01 15:40:55] 📌 POST /save-selected-columns
+✅ Columnas seleccionadas guardadas para spe: 8
+[2025-05-01 15:41:23] 📌 GET /get-rows/spe
+📊 Devolviendo 96 filas para spe
+[2025-05-01 15:41:23] 📌 POST /map-columns
+📌 Supplier recibido: spe
+📌 Columnas seleccionadas en /map-columns: [
+  'ProductID',
+  'CompanyDBAName',
+  'Market',
+  'ProductName',
+  'Rate',
+  'MSF',
+  'EarlyTerminationFee',
+  'Term'
+]
+📌 Mapping de columnas recibido: {
+  ProductID: 'Rate_ID',
+  CompanyDBAName: 'Company_DBA_Name',
+  Market: 'SPL_Utility_Name',
+  ProductName: 'Product_Name',
+  Rate: 'Rate',
+  MSF: 'MSF',
+  EarlyTerminationFee: 'ETF',
+  Term: 'duracion_rate'
+}
+📌 Filas recibidas: 96
+🔄 Intentando conectar a la base de datos con la configuración:
+{
+  host: 'localhost',
+  user: 'admin',
+  password: 'Usuario19.',
+  database: 'rates_db'
+}
+✅ Conexión a la base de datos establecida
+✅ Backup creado: Rates_backup_20250501_154123
+🔄 Eliminando registros previos de SPL: spe
+✅ Registros eliminados: 96
+📝 Query de inserción preparada: INSERT INTO Rates (Rate_ID, Company_DBA_Name, SPL_Utility_Name, Product_Name, Rate, MSF, ETF, duracion_rate, SPL) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+✅ 96 filas insertadas correctamente en Rates
+📣 Notificación enviada a Discord para el proveedor spe por usuario Brian Llanes
+📌 Conexión a la base de datos cerrada
+[2025-05-01 15:41:25] 📌 GET /columns
+[2025-05-01 15:49:41] 📌 GET /
+[2025-05-01 15:49:41] 📌 GET /
+[2025-05-01 15:50:10] 📌 GET /
+[2025-05-01 15:50:10] 📌 GET /
+[2025-05-01 15:53:11] 📌 GET /
+[2025-05-01 15:53:16] 📌 GET /
+[2025-05-01 15:53:47] 📌 GET /
+[2025-05-01 15:53:47] 📌 GET /
+[2025-05-01 16:09:46] 📌 GET /
+
+===============================
+📋 SERVIDOR INICIADO: 2025-05-01T16:13:58.309Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-05-01T16:13:58.345Z
+
+===============================
+📋 SERVIDOR INICIADO: 2025-05-01T16:19:33.267Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-05-01T16:19:33.306Z
+[2025-05-01 16:20:41] 📌 GET /api/rates/columns
+
+===============================
+📋 SERVIDOR INICIADO: 2025-05-01T16:21:53.371Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-05-01T16:21:53.407Z
+
+===============================
+📋 SERVIDOR INICIADO: 2025-05-01T16:59:38.186Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-05-01T16:59:38.225Z
+
+===============================
+📋 SERVIDOR INICIADO: 2025-05-01T17:33:07.836Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-05-01T17:33:07.877Z
+[2025-05-01 17:37:17] 📌 GET /columns
+[2025-05-01 17:37:34] 📌 GET /columns
+[2025-05-01 17:37:40] 📌 GET /columns
+
+===============================
+📋 SERVIDOR INICIADO: 2025-05-01T19:05:43.986Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-05-01T19:05:44.043Z
+
+===============================
+📋 SERVIDOR INICIADO: 2025-05-01T19:25:43.271Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-05-01T19:25:43.311Z
+[2025-05-01 19:26:07] 📌 GET /api/upload/columns
+[2025-05-01 19:27:22] 📌 GET /columns
+[2025-05-01 19:27:25] 📌 GET /columns
+[2025-05-01 19:28:24] 📌 GET /api/upload/columns
+[2025-05-01 19:33:00] 📌 GET /columns
+[2025-05-01 19:38:48] 📌 GET /columns
+[2025-05-01 19:41:33] 📌 GET /columns
+
+===============================
+📋 SERVIDOR INICIADO: 2025-05-01T19:59:28.136Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-05-01T19:59:28.172Z
+[2025-05-01 20:00:00] 📌 GET /columns
+[2025-05-01 20:00:21] 📌 GET /columns
+[2025-05-01 20:02:01] 📌 GET /columns
+[2025-05-01 20:02:07] 📌 POST /upload
+[2025-05-01 20:18:09] 📌 GET /columns
+[2025-05-01 20:18:18] 📌 POST /file
+📌 Columnas seleccionadas recibidas en el backend: []
+📊 Total de filas extraídas del Excel: 96
+✅ Archivo subido: NW Family - 04.29.25.xlsx - Columnas: 17
+[2025-05-01 20:18:26] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para spe: 1
+[2025-05-01 20:18:26] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para spe: 2
+[2025-05-01 20:18:27] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para spe: 3
+[2025-05-01 20:18:27] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para spe: 4
+[2025-05-01 20:18:40] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para spe: 5
+[2025-05-01 20:18:41] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para spe: 6
+[2025-05-01 20:18:56] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para spe: 7
+[2025-05-01 20:18:56] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para spe: 8
+[2025-05-01 20:19:27] 📌 GET /rows/spe
+📊 Devolviendo 96 filas para spe
+[2025-05-01 20:19:27] 📌 POST /map-columns
+📌 Supplier recibido: spe
+📌 Columnas seleccionadas en /map-columns: [
+  'ProductID',
+  'CompanyDBAName',
+  'Market',
+  'ProductName',
+  'Rate',
+  'MSF',
+  'EarlyTerminationFee',
+  'Term'
+]
+📌 Mapping de columnas recibido: {
+  ProductID: 'Rate_ID',
+  CompanyDBAName: 'Company_DBA_Name',
+  Market: 'SPL_Utility_Name',
+  ProductName: 'Product_Name',
+  Rate: 'Rate',
+  MSF: 'MSF',
+  EarlyTerminationFee: 'ETF',
+  Term: 'duracion_rate'
+}
+📌 Filas recibidas: 96
+🔄 Intentando conectar a la base de datos con la configuración:
+{
+  host: 'localhost',
+  user: 'admin',
+  password: 'Usuario19.',
+  database: 'rates_db'
+}
+✅ Conexión a la base de datos establecida
+✅ Backup creado: Rates_backup_20250501_201927
+🔄 Eliminando registros previos de SPL: spe
+✅ Registros eliminados: 96
+📝 Query de inserción preparada: INSERT INTO Rates (Rate_ID, Company_DBA_Name, SPL_Utility_Name, Product_Name, Rate, MSF, ETF, duracion_rate, SPL) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+✅ 96 filas insertadas correctamente en Rates
+📣 Notificación enviada a Discord para el proveedor spe por usuario Brian Llanes
+📌 Conexión a la base de datos cerrada
+[2025-05-01 20:19:31] 📌 GET /columns
+
+===============================
+📋 SERVIDOR INICIADO: 2025-05-01T20:43:05.737Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-05-01T20:43:05.792Z
+
+===============================
+📋 SERVIDOR INICIADO: 2025-05-01T20:51:21.920Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-05-01T20:51:21.988Z
+[2025-05-02 19:55:21] 📌 GET /columns
+[2025-05-02 19:55:33] 📌 POST /file
+📌 Columnas seleccionadas recibidas en el backend: []
+📊 Total de filas extraídas del Excel: 156
+✅ Archivo subido: 2025_05_Rates Sheets_NWFG.xlsx - Columnas: 9
+[2025-05-02 19:55:57] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para cs: 1
+[2025-05-02 19:55:58] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para cs: 2
+[2025-05-02 19:56:00] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para cs: 3
+[2025-05-02 19:56:00] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para cs: 4
+[2025-05-02 19:56:01] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para cs: 5
+[2025-05-02 19:56:01] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para cs: 6
+[2025-05-02 19:56:53] 📌 GET /rows/cs
+📊 Devolviendo 156 filas para cs
+[2025-05-02 19:56:53] 📌 POST /map-columns
+📌 Supplier recibido: cs
+📌 Columnas seleccionadas en /map-columns: [ 'Utility', 'Product Name', 'Program Code', 'MSF', 'Term', 'ETF' ]
+📌 Mapping de columnas recibido: {
+  Utility: 'SPL_Utility_Name',
+  'Product Name': 'Product_Name',
+  'Program Code': 'Rate_ID',
+  MSF: 'MSF',
+  Term: 'duracion_rate',
+  ETF: 'ETF'
+}
+📌 Filas recibidas: 156
+🛑 No se encontraron filas válidas para insertar. Se aborta la operación sin tocar la base de datos.
+[2025-05-02 20:36:14] 📌 GET /columns
+[2025-05-02 20:36:26] 📌 POST /file
+📌 Columnas seleccionadas recibidas en el backend: []
+📊 Total de filas extraídas del Excel: 156
+✅ Archivo subido: 2025_05_Rates Sheets_NWFG.xlsx - Columnas: 9
+[2025-05-02 20:36:30] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para cs: 1
+[2025-05-02 20:36:31] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para cs: 2
+[2025-05-02 20:36:32] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para cs: 3
+[2025-05-02 20:36:34] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para cs: 4
+[2025-05-02 20:36:35] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para cs: 5
+[2025-05-02 20:36:35] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para cs: 6
+[2025-05-02 20:36:36] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para cs: 5
+[2025-05-02 20:36:38] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para cs: 6
+[2025-05-02 20:36:39] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para cs: 7
+[2025-05-02 20:36:40] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para cs: 6
+[2025-05-02 20:36:40] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para cs: 7
+[2025-05-02 20:37:09] 📌 GET /rows/cs
+📊 Devolviendo 156 filas para cs
+[2025-05-02 20:37:09] 📌 POST /map-columns
+📌 Supplier recibido: cs
+📌 Columnas seleccionadas en /map-columns: [
+  'MSF',
+  'Term',
+  "CleanSky's Rate",
+  'ETF',
+  'Product Name',
+  'Program Code',
+  'Utility'
+]
+📌 Mapping de columnas recibido: {
+  MSF: 'MSF',
+  Term: 'duracion_rate',
+  "CleanSky's Rate": 'Rate',
+  ETF: 'ETF',
+  'Product Name': 'Product_Name',
+  'Program Code': 'Rate_ID',
+  Utility: 'SPL_Utility_Name'
+}
+📌 Filas recibidas: 156
+🔄 Intentando conectar a la base de datos con la configuración:
+{
+  host: 'localhost',
+  user: 'admin',
+  password: 'Usuario19.',
+  database: 'rates_db'
+}
+✅ Conexión a la base de datos establecida
+✅ Backup creado: Rates_backup_20250502_203709
+🔄 Eliminando registros previos de SPL: cs
+✅ Registros eliminados: 94
+📌 Procesando datos de Clean Sky: extrayendo duracion_rate de Product_Name
+📝 Query de inserción preparada: INSERT INTO Rates (MSF, duracion_rate, Rate, ETF, Product_Name, Rate_ID, SPL_Utility_Name, SPL) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+✅ 156 filas insertadas correctamente en Rates
+📣 Notificación enviada a Discord para el proveedor cs por usuario Brian Llanes
+📌 Conexión a la base de datos cerrada
+[2025-05-02 20:37:14] 📌 GET /columns
+[2025-05-02 22:01:17] 📌 GET /columns
+[2025-05-02 22:01:30] 📌 POST /file
+📌 Columnas seleccionadas recibidas en el backend: []
+📊 Total de filas extraídas del Excel: 133
+✅ Archivo subido: 2025_05_Rates Sheets_NWFG.xlsx - Columnas: 9
+[2025-05-02 22:01:36] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para cs: 1
+[2025-05-02 22:01:36] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para cs: 2
+[2025-05-02 22:01:37] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para cs: 3
+[2025-05-02 22:01:37] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para cs: 4
+[2025-05-02 22:01:38] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para cs: 5
+[2025-05-02 22:01:38] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para cs: 6
+[2025-05-02 22:01:39] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para cs: 7
+[2025-05-02 22:02:11] 📌 GET /rows/cs
+📊 Devolviendo 133 filas para cs
+[2025-05-02 22:02:11] 📌 POST /map-columns
+📌 Supplier recibido: cs
+📌 Columnas seleccionadas en /map-columns: [
+  'Utility',
+  'Product Name',
+  'Program Code',
+  "CleanSky's Rate",
+  'MSF',
+  'Term',
+  'ETF'
+]
+📌 Mapping de columnas recibido: {
+  Utility: 'SPL_Utility_Name',
+  'Product Name': 'Product_Name',
+  'Program Code': 'Rate_ID',
+  "CleanSky's Rate": 'Rate',
+  MSF: 'MSF',
+  Term: 'duracion_rate',
+  ETF: 'ETF'
+}
+📌 Filas recibidas: 133
+🔄 Intentando conectar a la base de datos con la configuración:
+{
+  host: 'localhost',
+  user: 'admin',
+  password: 'Usuario19.',
+  database: 'rates_db'
+}
+✅ Conexión a la base de datos establecida
+✅ Backup creado: Rates_backup_20250502_220211
+🔄 Eliminando registros previos de SPL: cs
+✅ Registros eliminados: 156
+📌 Procesando datos de Clean Sky: extrayendo duracion_rate de Product_Name
+📝 Query de inserción preparada: INSERT INTO Rates (SPL_Utility_Name, Product_Name, Rate_ID, Rate, MSF, duracion_rate, ETF, SPL) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+✅ 133 filas insertadas correctamente en Rates
+📣 Notificación enviada a Discord para el proveedor cs por usuario Brian Llanes
+📌 Conexión a la base de datos cerrada
+[2025-05-02 22:02:14] 📌 GET /columns
+
+===============================
+📋 SERVIDOR INICIADO: 2025-05-05T14:31:09.774Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-05-05T14:31:09.823Z
+[2025-05-05 17:30:41] 📌 GET /columns
+[2025-05-06 15:32:54] 📌 GET /columns
+[2025-05-06 15:32:56] 📌 GET /columns
+[2025-05-06 15:32:58] 📌 GET /columns
+[2025-05-06 15:33:08] 📌 POST /file
+📌 Columnas seleccionadas recibidas en el backend: []
+📊 Total de filas extraídas del Excel: 96
+✅ Archivo subido: NW - 05.06.25.xlsx - Columnas: 17
+[2025-05-06 15:33:17] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para spe: 1
+[2025-05-06 15:33:17] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para spe: 2
+[2025-05-06 15:33:17] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para spe: 3
+[2025-05-06 15:33:19] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para spe: 4
+[2025-05-06 15:33:19] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para spe: 5
+[2025-05-06 15:33:20] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para spe: 4
+[2025-05-06 15:33:21] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para spe: 5
+[2025-05-06 15:33:22] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para spe: 4
+[2025-05-06 15:33:25] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para spe: 5
+[2025-05-06 15:33:36] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para spe: 6
+[2025-05-06 15:33:38] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para spe: 7
+[2025-05-06 15:33:39] 📌 POST /columns/selected
+✅ Columnas seleccionadas guardadas para spe: 8
+[2025-05-06 15:34:58] 📌 GET /rows/spe
+📊 Devolviendo 96 filas para spe
+[2025-05-06 15:34:58] 📌 POST /map-columns
+📌 Supplier recibido: spe
+📌 Columnas seleccionadas en /map-columns: [
+  'ProductID',
+  'CompanyDBAName',
+  'Market',
+  'ProductName',
+  'Rate',
+  'MSF',
+  'EarlyTerminationFee',
+  'Term'
+]
+📌 Mapping de columnas recibido: {
+  ProductID: 'Rate_ID',
+  CompanyDBAName: 'Company_DBA_Name',
+  Market: 'SPL_Utility_Name',
+  ProductName: 'Product_Name',
+  Rate: 'Rate',
+  MSF: 'MSF',
+  EarlyTerminationFee: 'ETF',
+  Term: 'duracion_rate'
+}
+📌 Filas recibidas: 96
+🔄 Intentando conectar a la base de datos con la configuración:
+{
+  host: 'localhost',
+  user: 'admin',
+  password: 'Usuario19.',
+  database: 'rates_db'
+}
+✅ Conexión a la base de datos establecida
+✅ Backup creado: Rates_backup_20250506_153458
+🔄 Eliminando registros previos de SPL: spe
+✅ Registros eliminados: 96
+📝 Query de inserción preparada: INSERT INTO Rates (Rate_ID, Company_DBA_Name, SPL_Utility_Name, Product_Name, Rate, MSF, ETF, duracion_rate, SPL) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+✅ 96 filas insertadas correctamente en Rates
+📣 Notificación enviada a Discord para el proveedor spe por usuario Brian Llanes
+📌 Conexión a la base de datos cerrada
+[2025-05-06 15:35:01] 📌 GET /columns
+
+===============================
+📋 SERVIDOR INICIADO: 2025-05-06T16:00:33.464Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-05-06T16:00:33.504Z
+
+===============================
+📋 SERVIDOR INICIADO: 2025-05-06T17:16:53.438Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-05-06T17:16:53.491Z
+
+===============================
+📋 SERVIDOR INICIADO: 2025-05-07T15:06:14.266Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-05-07T15:06:14.311Z
+
+===============================
+📋 SERVIDOR INICIADO: 2025-05-07T20:12:43.943Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-05-07T20:12:44.027Z
+
+===============================
+📋 SERVIDOR INICIADO: 2025-05-07T21:11:49.630Z
+===============================
+
+🔐 Servidor seguro corriendo en https://nwfg.net:3001 - 2025-05-07T21:11:49.676Z
