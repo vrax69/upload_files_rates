@@ -8,7 +8,6 @@ const https = require("https");
 const cors = require("cors");
 const { Console } = require("console");
 const mysql = require('mysql2/promise');
-const { sendFileUploadEmbed } = require("../discord_bot/discordNotifier"); // ajusta la ruta si es necesario
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser"); 
 require("dotenv").config();
@@ -572,23 +571,6 @@ app.post("/map-columns", async (req, res) => {
                 }
                 } catch (err) {
                 console.warn("⚠️ No se pudo decodificar el token:", err.message);
-                }
-                
-                // ✅ Notificar al bot de Discord sobre la carga exitosa
-                try {
-                    await sendFileUploadEmbed({
-                        supplier,
-                        fileName: originalFileName,
-                        rowCount: insertedCount,
-                        user: username,
-                        timestamp: new Date().toISOString()
-                    });
-                    console.log(`📣 Notificación enviada a Discord para el proveedor ${supplier} por usuario ${username}`);
-                    logConsole.log(`📣 Notificación enviada a Discord para el proveedor ${supplier} por usuario ${username}`);
-                } catch (discordError) {
-                    console.error("⚠️ Error al enviar notificación a Discord:", discordError);
-                    logConsole.error("⚠️ Error al enviar notificación a Discord:", discordError);
-                    // No bloqueamos el proceso principal si falla la notificación
                 }
                 
                 // Enviar la respuesta asegurando que insertedCount esté presente
