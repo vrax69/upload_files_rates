@@ -75,8 +75,11 @@ const upload = multer({
     limits: { fileSize: 10 * 1024 * 1024 } // Límite de 10MB
 });
 
+// Crear router para las rutas de upload con prefijo /api/upload
+const uploadRouter = express.Router();
+
 // 📌 Ruta para guardar las columnas seleccionadas en el paso 2
-app.post("/columns/selected", async (req, res) => {
+uploadRouter.post("/columns/selected", async (req, res) => {
     try {
         const { supplier, selectedColumns } = req.body;
         
@@ -133,7 +136,7 @@ app.post("/columns/selected", async (req, res) => {
 });
 
 // 📌 Ruta para obtener las columnas seleccionadas para el paso 3
-app.get("/columns/selected/:supplier", async (req, res) => {
+uploadRouter.get("/columns/selected/:supplier", async (req, res) => {
     try {
         const supplier = req.params.supplier;
         if (!supplier) {
@@ -168,7 +171,7 @@ app.get("/columns/selected/:supplier", async (req, res) => {
 });
 
 // 📌 Ruta para subir archivos
-app.post("/file", upload.single("file"), async (req, res) => {
+uploadRouter.post("/file", upload.single("file"), async (req, res) => {
     try {
         const file = req.file;
         const supplier = req.body.supplier;
@@ -320,7 +323,7 @@ app.post("/file", upload.single("file"), async (req, res) => {
 });
 
 // 📌 Ruta para obtener columnas del backend (necesaria para el frontend)
-app.get("/columns", async (req, res) => {
+uploadRouter.get("/columns", async (req, res) => {
 
     try {
         // Puedes reemplazar esto con una consulta a la base de datos real si lo necesitas
@@ -339,7 +342,7 @@ app.get("/columns", async (req, res) => {
 });
 
 // 📌 Ruta para mapear columnas y guardar datos
-app.post("/map-columns", async (req, res) => {
+uploadRouter.post("/map-columns", async (req, res) => {
     let connection = null;
     
     try {
@@ -655,17 +658,8 @@ app.post("/map-columns", async (req, res) => {
             
 });
 
-// 📌 Ruta para verificar el estado del servidor
-app.get("/health", (req, res) => {
-    res.json({ 
-        status: "OK", 
-        timestamp: new Date().toISOString(),
-        version: "1.0.0" 
-    });
-});
-
 // 📌 Ruta para obtener todas las filas del archivo subido
-app.get("/rows/:supplier", async (req, res) => {
+uploadRouter.get("/rows/:supplier", async (req, res) => {
     try {
         const supplier = req.params.supplier;
         if (!supplier) {
@@ -702,6 +696,18 @@ app.get("/rows/:supplier", async (req, res) => {
         logConsole.error("❌ Error al obtener filas:", error);
         res.status(500).json({ success: false, error: `Error interno: ${error.message}` });
     }
+});
+
+// Montar el router de upload con el prefijo /api/upload
+app.use("/api/upload", uploadRouter);
+
+// 📌 Ruta para verificar el estado del servidor
+app.get("/health", (req, res) => {
+    res.json({ 
+        status: "OK", 
+        timestamp: new Date().toISOString(),
+        version: "1.0.0" 
+    });
 });
 
 // 📌 Manejador de errores
