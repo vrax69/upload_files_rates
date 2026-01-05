@@ -4,7 +4,7 @@ const fs = require("fs-extra");
 const path = require("path");
 const moment = require("moment");
 const xlsx = require("xlsx");
-const https = require("https");
+// const https = require("https"); // Comentado: SSL será manejado por Nginx
 const cors = require("cors");
 const { Console } = require("console");
 const mysql = require('mysql2/promise');
@@ -38,11 +38,11 @@ const dbConfig = {
     database: "rates_db",
 };
 
-// Cargar certificados SSL
-const options = {
-    key: fs.readFileSync("/etc/letsencrypt/live/nwfg.net/privkey.pem"),
-    cert: fs.readFileSync("/etc/letsencrypt/live/nwfg.net/fullchain.pem")
-};
+// Cargar certificados SSL - Comentado: SSL será manejado por Nginx
+// const options = {
+//     key: fs.readFileSync("/etc/letsencrypt/live/nwfg.net/privkey.pem"),
+//     cert: fs.readFileSync("/etc/letsencrypt/live/nwfg.net/fullchain.pem")
+// };
 
 const app = express();
 app.use(cookieParser()); // 👈 esta es la línea que necesitas
@@ -711,9 +711,9 @@ app.use((err, req, res, next) => {
     res.status(500).json({ success: false, error: "Error interno del servidor" });
 });
 
-// 📌 Crear servidor HTTPS
-https.createServer(options, app).listen(PORT, "0.0.0.0", () => {
-    const startupMessage = `🔐 Servidor seguro corriendo en https://nwfg.net:${PORT} - ${new Date().toISOString()}`;
+// 📌 Crear servidor HTTP (SSL será manejado por Nginx)
+app.listen(PORT, "0.0.0.0", () => {
+    const startupMessage = `🌐 Servidor HTTP corriendo en http://0.0.0.0:${PORT} - ${new Date().toISOString()}`;
     console.log(startupMessage);
     logConsole.log(startupMessage);
 });
