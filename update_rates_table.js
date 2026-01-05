@@ -341,6 +341,7 @@ uploadRouter.get("/columns", async (req, res) => {
     }
 });
 
+
 // 📌 Ruta para mapear columnas y guardar datos
 uploadRouter.post("/map-columns", async (req, res) => {
     let connection = null;
@@ -349,25 +350,10 @@ uploadRouter.post("/map-columns", async (req, res) => {
         const { supplier, columnMapping, rows, selectedColumns, headers } = req.body;
 
         if (!supplier || !columnMapping || !rows || rows.length === 0) {
-            console.error("❌ Error: Faltan datos necesarios para el mapeo");
-            return res.json({
-                success: false,
-                message: "Faltan datos necesarios (proveedor, mapping o filas)",
-                insertedRows: 0
-            });
+            return res.json({ success: false, message: "Faltan datos necesarios", insertedRows: 0 });
         }
 
-        console.log("📌 Supplier recibido:", supplier);
-        console.log("📌 Columnas seleccionadas en /map-columns:", selectedColumns?.length || 0);
-        console.log("📌 Mapping de columnas recibido:", Object.keys(columnMapping).length);
-        console.log(`📌 Filas recibidas: ${rows.length}`);
-
-        logConsole.log("📌 Supplier recibido:", supplier);
-        logConsole.log("📌 Columnas seleccionadas en /map-columns:", selectedColumns);
-        logConsole.log("📌 Mapping de columnas recibido:", columnMapping);
-        logConsole.log(`📌 Filas recibidas: ${rows.length}`);
-
-        // 💡 Validar si hay filas realmente válidas ANTES de tocar la base de datos
+        // 💡 Validar filas válidas ANTES de conectar
         const validRows = rows.filter(row => {
             if (row.Rate !== undefined && row.Rate !== null) {
                 let r = String(row.Rate).replace(",", ".");
@@ -378,284 +364,80 @@ uploadRouter.post("/map-columns", async (req, res) => {
         });
 
         if (validRows.length === 0) {
-            const msg = "🛑 No se encontraron filas válidas para insertar. Se aborta la operación sin tocar la base de datos.";
-            console.warn(msg);
-            logConsole.warn(msg);
-            return res.status(400).json({
-                success: false,
-                message: msg,
-                insertedRows: 0
-            });
+            return res.status(400).json({ success: false, message: "No se encontraron filas con Rate válido.", insertedRows: 0 });
         }
 
-        // 📌 Obtener la fecha actual
         const date = moment().format("YYYY-MM-DD");
         const time = moment().format("HH:mm:ss");
         const timestamp = moment().format("YYYYMMDD_HHmmss");
-
-        // 📂 Definir directorio para logs
         const logDir = path.join(baseDir, "logs");
-        const mappingLogPath = path.join(logDir, `${date}.log`);
-
-        // ✅ Crear directorio de logs si no existe
         await fs.ensureDir(logDir);
 
-        // 📌 Guardar detalles del mapping en el log
-        const mappingLogEntry = `
-🗂️ [${time}] 📄 Archivo: ${supplier}
-📊 Columnas totales en el archivo: ${headers?.length || 0} (${headers ? headers.join(", ") : "N/A"})
-✅ Columnas seleccionadas por el usuario: ${selectedColumns?.length || 0} (${selectedColumns ? selectedColumns.join(", ") : "N/A"})
-🔄 Mapping aplicado: ${JSON.stringify(columnMapping, null, 2)}
-📊 Filas procesadas: ${rows.length}
-`;
-        await fs.appendFile(mappingLogPath, mappingLogEntry);
-
-        // 📌 NUEVA FUNCIONALIDAD: Conexión a la base de datos MySQL
-        try {
-            console.log("🔄 Intentando conectar a la base de datos con la configuración:");
-            console.log(dbConfig);
-            logConsole.log("🔄 Intentando conectar a la base de datos con la configuración:");
-            logConsole.log(dbConfig);
+        // 1. Iniciar conexión
+        connection = await mysql.createConnection(dbConfig);
         
-            // Crear conexión a la base de datos
-            connection = await mysql.createConnection(dbConfig);
+        // 2. Backup de seguridad
+        const backupTable = `Rates_backup_${timestamp}`;
+        await connection.query(`CREATE TABLE ${backupTable} LIKE Rates`);
+        await connection.query(`INSERT INTO ${backupTable} SELECT * FROM Rates`);
         
-            console.log("✅ Conexión a la base de datos establecida");
-            logConsole.log("✅ Conexión a la base de datos establecida")
+        // 3. Limpiar registros previos del proveedor
+        await connection.query("DELETE FROM Rates WHERE SPL = ?", [supplier]);
 
-            // Crear tabla de respaldo con timestamp
-            const backupTable = `Rates_backup_${timestamp}`;
-            await connection.query(`CREATE TABLE ${backupTable} LIKE Rates`);
-            await connection.query(`INSERT INTO ${backupTable} SELECT * FROM Rates`);
-            console.log(`✅ Backup creado: ${backupTable}`);
-            logConsole.log(`✅ Backup creado: ${backupTable}`);
+        // 4. Preparar Columnas (EVITAR DUPLICADOS)
+        let dbColumns = Object.values(columnMapping);
+        
+        if (!dbColumns.includes("SPL")) dbColumns.push("SPL");
+
+        // Lógica específica para Clean Sky
+        if (supplier === 'cs') {
+            if (!dbColumns.includes("duracion_rate")) dbColumns.push("duracion_rate");
             
-            // Guardar información del backup en el log
-            await fs.appendFile(mappingLogPath, `\n📦 Backup creado: ${backupTable}\n`);
-
-            // Eliminar registros del proveedor seleccionado
-            console.log(`🔄 Eliminando registros previos de SPL: ${supplier}`);
-            logConsole.log(`🔄 Eliminando registros previos de SPL: ${supplier}`);
-            const [deleteResult] = await connection.query("DELETE FROM Rates WHERE SPL = ?", [supplier]);
-            console.log(`✅ Registros eliminados: ${deleteResult.affectedRows}`);
-            logConsole.log(`✅ Registros eliminados: ${deleteResult.affectedRows}`);
-            
-            // Guardar información de eliminación en el log
-            await fs.appendFile(mappingLogPath, `\n🗑️ ${deleteResult.affectedRows} registros previos de ${supplier} eliminados\n`);
-
-            // Construir query de inserción dinámicamente
-            const dbColumns = Object.values(columnMapping); // Columnas destino en la BD
-            
-            // Asegurar que SPL está incluido en las columnas
-            if (!dbColumns.includes("SPL")) {
-                dbColumns.push("SPL");
-            }
-
-            // 📌 Extraer duracion_rate desde Product_Name para Clean Sky (SPL = 'cs')
-            if (supplier === 'cs') {
-                console.log("📌 Procesando datos de Clean Sky: extrayendo duracion_rate de Product_Name");
-                logConsole.log("📌 Procesando datos de Clean Sky: extrayendo duracion_rate de Product_Name");
-                
-                // Añadir duracion_rate a las columnas si no está presente
-                if (!dbColumns.includes("duracion_rate")) {
-                    dbColumns.push("duracion_rate");
+            for (const row of validRows) {
+                if (row.Product_Name) {
+                    const match = row.Product_Name.match(/\d+/);
+                    row.duracion_rate = match ? parseInt(match[0], 10) : null;
                 }
-                
-                // Extraer duracion_rate de cada fila
-                for (const row of rows) {
-                    if (row.Product_Name) {
-                        // Buscar el primer número en Product_Name (por ejemplo, "Eco Rewards 12" -> 12)
-                        const match = row.Product_Name.match(/\d+/);
-                        row.duracion_rate = match ? parseInt(match[0], 10) : null;
-                        
-                        console.log(`📌 Extraído duracion_rate: ${row.duracion_rate} de Product_Name: "${row.Product_Name}"`);
-                    } else {
-                        row.duracion_rate = null;
-                    }
-                }
-                
-                await fs.appendFile(mappingLogPath, `\n📊 Extraída duracion_rate automáticamente para ${rows.length} filas de Clean Sky\n`);
             }
+        }
 
-            // Crear placeholders para la query (?, ?, ?)
-            const placeholders = Array(dbColumns.length).fill("?").join(", ");
-            
-            // Construir la query de inserción
-            const insertQuery = `INSERT INTO Rates (${dbColumns.join(", ")}) VALUES (${placeholders})`;
-            
-            console.log("📝 Query de inserción preparada:", insertQuery);
-            logConsole.log("📝 Query de inserción preparada:", insertQuery);
-            
-            // Log detallado de los datos a insertar
-            const insertionLogPath = path.join(logDir, `${date}_insertion_data.log`);
-            await fs.writeFile(insertionLogPath, `\n=== DATOS A INSERTAR (${time}) ===\n\n`);
-            
-            // Insertar filas en la base de datos
-            let insertedCount = 0; // Asegurar que insertedCount está definido
+        // 🔥 ELIMINAR DUPLICADOS REALES AQUÍ
+        const uniqueDbColumns = [...new Set(dbColumns)];
+        const placeholders = Array(uniqueDbColumns.length).fill("?").join(", ");
+        const insertQuery = `INSERT INTO Rates (${uniqueDbColumns.join(", ")}) VALUES (${placeholders})`;
 
+        // 5. Inserción masiva
+        let insertedCount = 0;
+        for (const row of validRows) {
             try {
-                for (const row of rows) {
-                    try {
-                        // 🔄 LIMPIAR Y CONVERTIR VALORES ANTES DE INSERTAR
-                
-                        // 🔹 Limpiar la columna Rate eliminando cualquier carácter que no sea número o punto decimal
-                        if (row.Rate !== undefined && row.Rate !== null) {
-                            row.Rate = String(row.Rate).replace(",", ".");
-                            row.Rate = parseFloat(row.Rate); // Convertir a número después del reemplazo
-                        }
-                
-                        // 🔹 Si después de la limpieza Rate no es un número válido, lo dejamos como NULL
-                        if (isNaN(row.Rate) || row.Rate < 0) {
-                            console.warn(`⚠️ Fila omitida por Rate inválido: ${JSON.stringify(row)}`);
-                            continue; // Omitir esta fila y pasar a la siguiente
-                        }
-                
-                        // 🔹 Preparar valores para la inserción en la base de datos
-                        const values = dbColumns.map(col => {
-                            if (col === "SPL" && (!row[col] || row[col] === "")) {
-                                return supplier;
-                            }
-                            return row[col] !== undefined && row[col] !== null && row[col] !== "" ? row[col] : null;
-                        });
-                
-                        // 🔹 Insertar en la base de datos
-                        await connection.query(insertQuery, values);
-                        insertedCount++;
-                
-                    } catch (insertError) {
-                        console.error(`❌ Error insertando fila #${insertedCount + 1}:`, insertError);
-                        logConsole.error(`❌ Error insertando fila #${insertedCount + 1}:`, insertError);
-                    }
-                }              
-            
-                console.log(`✅ ${insertedCount} filas insertadas correctamente en Rates`);
-                logConsole.log(`✅ ${insertedCount} filas insertadas correctamente en Rates`);
-            
-                // ✅ Obtener el nombre original del archivo desde el archivo temporal
-                const originalFilePath = path.join(baseDir, "temp", `rows_${supplier}_${date}.json`);
-                let originalFileName = `${supplier}_${date}.xlsx`; // valor por defecto
-                
-                try {
-                    if (await fs.pathExists(originalFilePath)) {
-                        const fileData = await fs.readJson(originalFilePath);
-                        originalFileName = fileData.fileOriginalName || originalFileName;
-                        console.log(`📄 Nombre original del archivo recuperado: ${originalFileName}`);
-                    }
-                } catch (fileReadError) {
-                    console.error("⚠️ Error al leer el nombre original del archivo:", fileReadError);
-                    // Continuamos con el nombre por defecto si hay error
-                }
-                
-                // Extraer username del request body
-                let username = "Desconocido";
+                // Limpieza de Rate
+                row.Rate = parseFloat(String(row.Rate).replace(",", "."));
 
-                try {
-                const token = req.cookies?.token; // la cookie se llama 'token'
-                if (token) {
-                    try {
-                        const decoded = jwt.verify(token, process.env.JWT_SECRET);
-                        
-                        console.log("🧠 JWT recibido:");
-                        console.log(JSON.stringify(decoded, null, 2)); // 👈 Log completo con formato
-
-                        // Extraer campos útiles
-                        const { nombre, role, centro } = decoded;
-                        username = nombre || "Desconocido";
-
-                        console.log(`🔐 Usuario: ${nombre}`);
-                        console.log(`🔐 Rol: ${role}`);
-                        console.log(`🏢 Centro: ${centro}`);
-
-                    } catch (err) {
-                        console.warn("⚠️ No se pudo decodificar el token:", err.message);
-                    }
-                } else {
-                    console.warn("⚠️ No se encontró token en la cookie.");
-                }
-                } catch (err) {
-                console.warn("⚠️ No se pudo decodificar el token:", err.message);
-                }
-                
-                // Enviar la respuesta asegurando que insertedCount esté presente
-                return res.json({
-                    success: true,
-                    message: `Datos procesados correctamente: ${insertedCount} filas insertadas.`,
-                    insertedRows: insertedCount
+                // Mapear valores siguiendo el orden de uniqueDbColumns
+                const values = uniqueDbColumns.map(col => {
+                    if (col === "SPL") return row[col] || supplier;
+                    return (row[col] !== undefined && row[col] !== null && row[col] !== "") ? row[col] : null;
                 });
-            
-            } catch (error) {
-                console.error("❌ Error en la inserción de datos:", error);
-                logConsole.error("❌ Error en la inserción de datos:", error);
-            
-                return res.status(500).json({
-                    success: false,
-                    message: `Error interno del servidor: ${error.message}`
-                });
-            }
-            
-            console.log(`✅ ${insertedCount} filas insertadas correctamente en Rates`);
-            logConsole.log(`✅ ${insertedCount} filas insertadas correctamente en Rates`);
-            
-            // Guardar resumen de la inserción en el log principal
-            await fs.appendFile(mappingLogPath, `\n✅ ${insertedCount} filas insertadas en la base de datos\n`);
-            
-            // Registrar en el log si hubo discrepancia entre filas procesadas y insertadas
-            if (insertedCount !== rows.length) {
-                const message = `⚠️ Advertencia: Solo se insertaron ${insertedCount} de ${rows.length} filas`;
-                console.warn(message);
-                logConsole.warn(message);
-                await fs.appendFile(mappingLogPath, `\n${message}\n`);
-            }
-            
-            } catch (dbError) {
-                console.error("❌ Error en operación de base de datos:", dbError);
-                logConsole.error("❌ Error en operación de base de datos:", dbError);
-                await fs.appendFile(mappingLogPath, `\n❌ ERROR DE BASE DE DATOS: ${dbError.message}\n`);
-            
-                // Si hay error de DB, propagarlo para que se maneje en el catch general
-                throw new Error(`Error de base de datos: ${dbError.message}`);
-            }
-            
-            // Verificar si se insertaron filas antes de considerar la operación como exitosa
-            if (insertedCount === 0) {
-                const msg = "El archivo fue procesado, pero no se insertó ninguna fila. Verifica el mapeo o los datos.";
-                console.warn(`📭 ${msg}`);
-                logConsole.warn(`📭 ${msg}`);
 
-                return res.status(400).json({
-                    success: false,
-                    message: msg,
-                    insertedRows: 0
-                });
+                await connection.query(insertQuery, values);
+                insertedCount++;
+            } catch (insertError) {
+                console.error(`❌ Error en fila #${insertedCount + 1}:`, insertError.message);
             }
-            
-            res.json({
-                success: true,
-                message: `Datos procesados correctamente: ${insertedCount} filas insertadas.`,
-                insertedRows: insertedCount
-            });
-            
-            } catch (error) {
-                console.error("❌ Error en /map-columns:", error);
-                logConsole.error("❌ Error en /map-columns:", error);
-                res.status(500).json({ 
-                    success: false,
-                    message: `Error interno del servidor: ${error.message}`
-                });
-            } finally {
-                // Cerrar la conexión a la base de datos si está abierta
-                if (connection) {
-                    try {
-                        await connection.end();
-                        console.log("📌 Conexión a la base de datos cerrada");
-                        logConsole.log("📌 Conexión a la base de datos cerrada");
-                    } catch (closeError) {
-                        console.error("❌ Error al cerrar la conexión:", closeError);
-                        logConsole.error("❌ Error al cerrar la conexión:", closeError);
-                    }
-                }
-            }
-            
+        }
+
+        res.json({
+            success: true,
+            message: `Datos procesados: ${insertedCount} filas insertadas.`,
+            insertedRows: insertedCount
+        });
+
+    } catch (error) {
+        console.error("❌ Error en /map-columns:", error);
+        res.status(500).json({ success: false, message: error.message });
+    } finally {
+        if (connection) await connection.end();
+    }
 });
 
 // 📌 Ruta para obtener todas las filas del archivo subido
