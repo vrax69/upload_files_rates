@@ -384,15 +384,12 @@ uploadRouter.post("/map-columns", async (req, res) => {
         // 3. Limpiar registros previos del proveedor
         await connection.query("DELETE FROM Rates WHERE SPL = ?", [supplier]);
 
-        // 4. Preparar Columnas (EVITAR DUPLICADOS)
         let dbColumns = Object.values(columnMapping);
-        
         if (!dbColumns.includes("SPL")) dbColumns.push("SPL");
 
-        // Lógica específica para Clean Sky
+        // Lógica específica para Clean Sky (Extracción de meses)
         if (supplier === 'cs') {
             if (!dbColumns.includes("duracion_rate")) dbColumns.push("duracion_rate");
-            
             for (const row of validRows) {
                 if (row.Product_Name) {
                     const match = row.Product_Name.match(/\d+/);
@@ -401,19 +398,30 @@ uploadRouter.post("/map-columns", async (req, res) => {
             }
         }
 
-        // 🔥 ELIMINAR DUPLICADOS REALES AQUÍ
+        // Definir columnas únicas y preparar la Query Robusta
         const uniqueDbColumns = [...new Set(dbColumns)];
         const placeholders = Array(uniqueDbColumns.length).fill("?").join(", ");
-        const insertQuery = `INSERT INTO Rates (${uniqueDbColumns.join(", ")}) VALUES (${placeholders})`;
+        
+        // Crear la instrucción de actualización para duplicados
+        const updateFields = uniqueDbColumns
+            .filter(col => col !== 'Rate_ID') // No actualizamos la llave primaria
+            .map(col => `${col} = VALUES(${col})`)
+            .join(", ");
 
-        // 5. Inserción masiva
+        const insertQuery = `
+            INSERT INTO Rates (${uniqueDbColumns.join(", ")}) 
+            VALUES (${placeholders})
+            ON DUPLICATE KEY UPDATE ${updateFields}
+        `;
+
+        // 5. Inserción masiva con manejo de conflictos
         let insertedCount = 0;
         for (const row of validRows) {
             try {
-                // Limpieza de Rate
+                // Asegurar formato numérico para el Rate
                 row.Rate = parseFloat(String(row.Rate).replace(",", "."));
 
-                // Mapear valores siguiendo el orden de uniqueDbColumns
+                // Mapear valores siguiendo estrictamente el orden de uniqueDbColumns
                 const values = uniqueDbColumns.map(col => {
                     if (col === "SPL") return row[col] || supplier;
                     return (row[col] !== undefined && row[col] !== null && row[col] !== "") ? row[col] : null;
@@ -422,7 +430,8 @@ uploadRouter.post("/map-columns", async (req, res) => {
                 await connection.query(insertQuery, values);
                 insertedCount++;
             } catch (insertError) {
-                console.error(`❌ Error en fila #${insertedCount + 1}:`, insertError.message);
+                // Aquí solo saltarán errores que no sean por duplicados (ej. falta de conexión)
+                console.error(`❌ Error real de DB en fila #${insertedCount + 1}:`, insertError.message);
             }
         }
 
